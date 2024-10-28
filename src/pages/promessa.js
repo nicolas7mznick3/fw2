@@ -2,7 +2,6 @@ import { useState } from "react";
 import Footer from "./modulos/footer";
 import Menu from "./modulos/navbar";
 import { Container } from "react-bootstrap";
-
 export default function Promessa() {
 const [pao, setpao] = useState("")
     setTimeout(() => {
@@ -12,7 +11,7 @@ const [pao, setpao] = useState("")
     return <>
         <Menu />
         <Container>
-            Promessa {pao==="" ? "<carregando>" : pao}
+            Promessa {pao==="" ? <img src="./loading.gif" width={60} height={20}/> : pao}
         </Container>
         <Footer />
     </>
